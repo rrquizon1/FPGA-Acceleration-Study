@@ -4,7 +4,7 @@ This whole sample project is an implementation of a simple neural network for cl
 
 The neuron circuit is described by the image below taken from the original tutorial:
 
-<img width="2000" height="1842" alt="image" src="https://github.com/user-attachments/assets/9b3fffa8-1204-4b08-a235-52b2930571d7" />
+<img width="1000" height="900" alt="image" src="https://github.com/user-attachments/assets/9b3fffa8-1204-4b08-a235-52b2930571d7" />
 
 
 The jupyter notebook trainNN generates the following:
