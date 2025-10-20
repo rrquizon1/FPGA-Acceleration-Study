@@ -45,4 +45,5 @@ See sample run below:
 In the sample run shown above, the accuracy is 95%. The observed errors may stem either from the original weights and biases produced during network training or from quantization effects during deployment.
 
 Some notes:
+
     * This example can be configured to have longer datawidth, more layers, weightIntWidth, etc. When adjusting the parameters of the network, make sure to adjust also the testdata parameters and sigmoid parameters to prevent erroneous results.
