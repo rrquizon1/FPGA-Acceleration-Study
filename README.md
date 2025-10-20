@@ -24,3 +24,14 @@ The neural network for this example is structured like below:
 
 
 The network accepts flattened inputs of the MNIST images with the first two layers having 30 neurons while the third and fourth have 10 neurons and a max finder at the final output.
+
+The RTL files include the following:
+
+* neuron.v- contains the neuron implementation
+* include.v-contains all the defining variables including, datawidth, numLayers, activation,etc.
+* Weight_Memory.v- memory module used for loading of weights
+* Sig_ROM.v- memory module used for loading of sigmoid implementation
+* Layer_x- modules for each layers
+* zynet.v-top level of the neural network interfaced to an AXI4 lite bus
+* relu.v- ReLU implementation, you can select this if youre using relu as activation
+* tb.v- testbench for simulation
