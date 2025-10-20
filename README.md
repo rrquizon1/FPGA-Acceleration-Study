@@ -39,7 +39,8 @@ The RTL files include the following:
 
 See sample run below:
 
-<img width="768" height="678" alt="image" src="https://github.com/user-attachments/assets/d4b12aaa-c9a4-4e4e-804e-1506234e19f3" />
+<img width="559" height="640" alt="image" src="https://github.com/user-attachments/assets/1036e679-1a11-4c51-b5ca-0592ed4fe3f2" />
+
 
 In the sample run shown above, the accuracy is 95%. The observed errors may stem either from the original weights and biases produced during network training or from quantization effects during deployment.
 
