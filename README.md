@@ -35,3 +35,13 @@ The RTL files include the following:
 * zynet.v-top level of the neural network interfaced to an AXI4 lite bus
 * relu.v- ReLU implementation, you can select this if youre using relu as activation
 * tb.v- testbench for simulation
+
+
+See sample run below:
+
+<img width="768" height="678" alt="image" src="https://github.com/user-attachments/assets/d4b12aaa-c9a4-4e4e-804e-1506234e19f3" />
+
+In the sample run shown above, the accuracy is 95%. The observed errors may stem either from the original weights and biases produced during network training or from quantization effects during deployment.
+
+Some notes:
+    * This example can be configured to have longer datawidth, more layers, weightIntWidth, etc. When adjusting the parameters of the network, make sure to adjust also the testdata parameters and sigmoid parameters to prevent erroneous results.
