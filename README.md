@@ -7,7 +7,7 @@ The neuron circuit is described by the image below taken from the original tutor
 <img width="1000" height="900" alt="image" src="https://github.com/user-attachments/assets/9b3fffa8-1204-4b08-a235-52b2930571d7" />
 
 
-The jupyter notebook trainNN generates the following:
+The jupyter notebook trainNN.ipynb generates the following:
 
     1. Generation of sigmoid memory file for sigmoid implementation in the neural network
     
