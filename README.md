@@ -1,6 +1,6 @@
 This repository is a replication of the tutorial regarding FPGA AI accelerator from this [Youtube Playlist](https://www.youtube.com/watch?v=rw_JITpbh3k&list=PLJePd8QU_LYKZwJnByZ8FHDg5l1rXtcIq)
 
-This whole sample project is an implementation of a simple neural network for classification of MNIST dataset. The original project from the tutorial was implemented in vivado, this repository is implemented in Lattice Radiant using  Lattice Synthesis Engine (LSE) as synthesizer. 
+This whole sample project is an implementation of a simple neural network for classification of MNIST dataset. The original project from the tutorial was implemented in vivado, this repository is implemented in Lattice Radiant using  Lattice Synthesis Engine (LSE) as synthesis tool.
 
 The neuron circuit is described by the image below taken from the original tutorial:
 
