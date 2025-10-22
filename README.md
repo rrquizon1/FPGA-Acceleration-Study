@@ -1,6 +1,6 @@
 This repository is a replication of the tutorial regarding FPGA AI accelerator from this [Youtube Playlist](https://www.youtube.com/watch?v=rw_JITpbh3k&list=PLJePd8QU_LYKZwJnByZ8FHDg5l1rXtcIq)
 
-This whole sample project is an implementation of a simple neural network for classification of MNIST dataset. The original project from the tutorial was implemented in vivado, this repository is implemented in Lattice Radiant. 
+This whole sample project is an implementation of a simple neural network for classification of MNIST dataset. The original project from the tutorial was implemented in vivado, this repository is implemented in Lattice Radiant using  Lattice Synthesis Engine (LSE) as synthesizer. 
 
 The neuron circuit is described by the image below taken from the original tutorial:
 
@@ -38,6 +38,10 @@ The RTL files include the following:
 * zynet.v-top level of the neural network interfaced to an AXI4 lite bus
 * relu.v- ReLU implementation, you can select this if youre using relu as activation
 * tb.v- testbench for simulation
+
+
+See sample utilization of the DSP blocks:
+<img width="1400" height="877" alt="image" src="https://github.com/user-attachments/assets/c5e3143d-935c-47d1-ab30-25aeb0976bc3" />
 
 
 See sample run below:
