@@ -46,7 +46,7 @@ In the sample run shown above, the accuracy is 95%. The observed errors may stem
 
 Some notes:
 
-    * This example can be configured to have longer datawidth, more layers, weightIntWidth, etc. When adjusting the parameters of the network, make sure to adjust also the testdata parameters and sigmoid parameters to prevent erroneous results.
-    * The timing for this design is not closed and was still not hardawre validated on Lattice devices 
+* This example can be configured to have longer datawidth, more layers, weightIntWidth, etc. When adjusting the parameters of the network, make sure to adjust also the testdata parameters and sigmoid parameters to prevent erroneous results.
+* The timing for this design is not closed and was still not hardawre validated on Lattice devices 
    
 
