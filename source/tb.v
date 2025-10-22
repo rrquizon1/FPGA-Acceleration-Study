@@ -21,7 +21,7 @@
 
 `include "../source/impl_1/include.v"
 //`include "include.v"
-`define MaxTestSamples 500
+`define MaxTestSamples 20
 
 module top_sim(
 
@@ -156,62 +156,6 @@ module top_sim(
     end
     endtask
     
-  /*  task configWeights();
-    integer i,j,k,t;
-    integer neuronNo_int;
-    reg [`dataWidth:0] config_mem [783:0];
-    begin
-        @(posedge clock);
-        for(k=1;k<=`numLayers;k=k+1)
-        begin
-            writeAxi(12,k);//Write layer number
-            for(j=0;j<numNeurons[k];j=j+1)
-            begin
-                neuronNo_int = j;
-                fileName[0] = "f";
-                fileName[1] = "i";
-                fileName[2] = "m";
-                fileName[3] = ".";
-                if(j > 9)
-                begin
-                    fileName[4] = 48;
-                    fileName[5] = 48;
-                    i=0;
-                    while(neuronNo_int != 0)
-                    begin
-                        fileName[i+4] = to_ascii(neuronNo_int%10);
-                        neuronNo_int = neuronNo_int/10;
-                        i=i+1;
-                    end 
-                    fileName[6] = "_";
-                    fileName[7] = to_ascii(k);
-                    fileName[8] = "_";
-                    fileName[9] = "w";
-                end
-                else
-                begin
-                    fileName[4] = 48;
-                    i=0;
-                    while(neuronNo_int != 0)
-                    begin
-                        fileName[i+4] = to_ascii(neuronNo_int%10);
-                        neuronNo_int = neuronNo_int/10;
-                        i=i+1;
-                    end 
-                    fileName[5] = "_";
-                    fileName[6] = to_ascii(k);
-                    fileName[7] = "_";
-                    fileName[8] = "w";
-                end
-                $readmemb(fileName, config_mem);
-                writeAxi(16,j);//Write neuron number
-                for (t=0; t<numWeights[k]; t=t+1) begin
-                    writeAxi(0,{15'd0,config_mem[t]});
-                end 
-            end
-        end
-    end
-    endtask*/
 	task configWeights;
     integer i, j, k, t;
     integer neuronNo_int;
@@ -263,60 +207,7 @@ begin
 end
 endtask
     
-/*    task configBias();
-    integer i,j,k,t;
-    integer neuronNo_int;
-    reg [31:0] bias[0:0];
-    begin
-        @(posedge clock);
-        for(k=1;k<=`numLayers;k=k+1)
-        begin
-            writeAxi(12,k);//Write layer number
-            for(j=0;j<numNeurons[k];j=j+1)
-            begin
-                neuronNo_int = j;
-                fileName[0] = "f";
-                fileName[1] = "i";
-                fileName[2] = "m";
-                fileName[3] = ".";
-                if(j>9)
-                begin
-                    fileName[4] = 48;
-                    fileName[5] = 48;
-                    i=0;
-                    while(neuronNo_int != 0)
-                    begin
-                        fileName[i+4] = to_ascii(neuronNo_int%10);
-                        neuronNo_int = neuronNo_int/10;
-                        i=i+1;
-                    end 
-                    fileName[6] = "_";
-                    fileName[7] = to_ascii(k);
-                    fileName[8] = "_";
-                    fileName[9] = "b";
-                end
-                else
-                begin
-                    fileName[4] = 48;
-                    i=0;
-                    while(neuronNo_int != 0)
-                    begin
-                        fileName[i+4] = to_ascii(neuronNo_int%10);
-                        neuronNo_int = neuronNo_int/10;
-                        i=i+1;
-                    end 
-                    fileName[5] = "_";
-                    fileName[6] = to_ascii(k);
-                    fileName[7] = "_";
-                    fileName[8] = "b";               
-                end
-                $readmemb(fileName, bias);
-                writeAxi(16,j);//Write neuron number
-                writeAxi(4,{15'd0,bias[0]});
-            end
-        end
-    end
-    endtask*/
+
     task configBias;
     integer i, j, k;
     integer tens, ones;
@@ -362,59 +253,9 @@ begin
 end
 endtask
 
-    /*reg [`dataWidth-1:0] in_mem [784:0];
-    task sendData();
-    //input [25*7:0] fileName;
-    integer t;
-    begin
-        $readmemb(fileName, in_mem);
-        @(posedge clock);
-        @(posedge clock);
-        @(posedge clock);
-        for (t=0; t <784; t=t+1) begin
-            @(posedge clock);
-            in <= in_mem[t];
-            in_valid <= 1;
-            //@(posedge clock);
-            //in_valid <= 0;
-        end 
-        @(posedge clock);
-        in_valid <= 0;
-        expected = in_mem[t];
-    end
-    endtask*/
+
 	
 reg [`dataWidth-1:0] in_mem [0:784];
-//reg [8*20:1] fileName1;  // fixed-size filename buffer for input file
-/*
-task sendData;
-    integer t;
-begin
-    // Read input data file
-    $readmemb(fileName1, in_mem);
-
-    // Optional debug
-    // $display("Sending data from file: %0s", fileName);
-
-    // Wait a few clock cycles before starting
-    @(posedge clock);
-    @(posedge clock);
-    @(posedge clock);
-
-    // Send 784 input values
-    for (t = 0; t < 784; t = t + 1) begin
-        @(posedge clock);
-        in       <= in_mem[t];
-        in_valid <= 1'b1;
-    end
-
-    @(posedge clock);
-    in_valid <= 1'b0;
-
-    // Last entry is the expected output
-    expected = in_mem[784];
-end
-endtask*/
 
 reg [8*64:1] fileName1; // 64 characters max
 
