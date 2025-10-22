@@ -21,7 +21,10 @@ The neural network for this example is structured like below:
 
 <img width="1056" height="552" alt="image" src="https://github.com/user-attachments/assets/c162758b-f8a6-4116-99f1-eda727374f1e" />
 
+For this example, we used tensorflow to train the network:
+<img width="1624" height="833" alt="image" src="https://github.com/user-attachments/assets/2cf46b6a-58b1-4bb0-bb51-646273786edd" />
 
+The extraction of weights and biases are in the jupyter notebook. All these materials are from the original tutorial.
 
 The network accepts flattened inputs of the MNIST images with the first two layers having 30 neurons while the third and fourth have 10 neurons and a max finder at the final output.
 
