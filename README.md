@@ -9,11 +9,11 @@ The neuron circuit is described by the image below taken from the original tutor
 
 The jupyter notebook trainNN.ipynb generates the following:
 
-    1. Generation of sigmoid memory file for sigmoid implementation in the neural network
+1. Generation of sigmoid memory file for sigmoid implementation in the neural network
     
-    2. Generation of network weights and biases
-    
-    3. Generation of test data
+2. Generation of network weights and biases
+
+3. Generation of test data
 
 
 
